@@ -41,7 +41,8 @@ const RightNav = () => {
       <div className="position-relative">
         <img src={bg} alt="Your Image" className="img-fluid" />
         <div className="position-absolute top-50 start-50 translate-middle text-start text-white">
-         <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non iure cupiditate dolores reiciendis vitae aliquam ex distinctio voluptate dolore rem.</p>
+         <h4 className="text-white">Create An Amazing NewsPaper</h4>
+         <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sunt?</p>
          <Button variant="outline-primary"> <span className="text-white"> Facebook</span></Button>
         </div>
       </div>
