@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, ListGroup } from "react-bootstrap";
+import { Button, Container, ListGroup } from "react-bootstrap";
 import { FaGoogle, FaGithub,FaFacebook,FaTwitter,FaInstagram } from 'react-icons/fa';
+import Qzone from "../QZone/Qzone";
+import bg from '../../../assets/bg.png'
 
 const RightNav = () => {
   return (
@@ -23,7 +25,27 @@ const RightNav = () => {
 
       </div>
 
+      <Qzone></Qzone>
 
+      {/* <div>
+       <div className="position-relative" >
+       <img src={bg} alt="" />
+      
+        <div className="position-absolute">
+        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quaerat debitis cum optio tenetur ab facilis eligendi aspernatur illo vero.</p>
+        </div>
+        </div>
+      </div> */}
+
+<Container>
+      <div className="position-relative">
+        <img src={bg} alt="Your Image" className="img-fluid" />
+        <div className="position-absolute top-50 start-50 translate-middle text-start text-white">
+         <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non iure cupiditate dolores reiciendis vitae aliquam ex distinctio voluptate dolore rem.</p>
+         <Button variant="outline-primary"> <span className="text-white"> Facebook</span></Button>
+        </div>
+      </div>
+    </Container>
 
     </div>
   );
