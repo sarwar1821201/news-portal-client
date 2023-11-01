@@ -13,15 +13,15 @@ const RightNav = () => {
 
       <div >
         <h4 className="mt-2">Find Us On</h4>
-        {/* <ListGroup >
+        <ListGroup >
       <ListGroup.Item > <FaFacebook></FaFacebook> Facebook  </ListGroup.Item>
       <ListGroup.Item > <FaTwitter></FaTwitter> Twitter </ListGroup.Item>
       <ListGroup.Item> <FaInstagram></FaInstagram> Instagram </ListGroup.Item>
      
-    </ListGroup> */}
-      <Button variant="outline-secondary"> <FaFacebook></FaFacebook>  Facebook</Button>
+    </ListGroup>
+      {/* <Button variant="outline-secondary"> <FaFacebook></FaFacebook>  Facebook</Button>
       <Button variant="outline-secondary"> <FaTwitter></FaTwitter> Twitter</Button>
-      <Button variant="outline-secondary"> <FaInstagram></FaInstagram>  Instagram </Button>
+      <Button variant="outline-secondary"> <FaInstagram></FaInstagram>  Instagram </Button> */}
 
       </div>
 

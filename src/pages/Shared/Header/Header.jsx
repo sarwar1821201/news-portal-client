@@ -12,7 +12,7 @@ const Header = () => {
         <p className="text-secondary">
           <small>Journalism Without fear and favour</small>
         </p>
-        <p>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</p>
+        <p>{moment().format("dddd, MMMM Do, YYYY, h:mm:ss a")}</p>
       </div>
 
       <div className="d-flex">
