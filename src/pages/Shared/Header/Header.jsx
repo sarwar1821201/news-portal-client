@@ -28,7 +28,7 @@ const Header = () => {
         </Marquee>
       </div>
 
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      {/* <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
         
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -57,7 +57,7 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar> */}
 
 
     </Container>
