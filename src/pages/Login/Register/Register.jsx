@@ -1,12 +1,47 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProviders';
 
 const Register = () => {
+
+    const {createUser} =useContext(AuthContext)
+    const[error,setError] =useState('')
+
+     const handleRegister= (event) => {
+
+      
+
+        event.preventDefault()
+        const name= event.target.name.value;
+        const email= event.target.email.value;
+        const password= event.target.password.value;
+         const photo= event.target.photo.value;
+
+         console.log(name,email,password,photo)
+         
+         if(password.length<6){
+           setError('password must be at least 6 character')
+           return
+           
+         }
+
+        createUser(email,password)
+        .then( result=> {
+            const loggedUser= result.user;
+            console.log(loggedUser)
+        } )
+
+        .catch(error=>{
+            console.log(error)
+        })
+
+     }
+
     return (
         <Container className='mx-auto w-25'  >
-        <h3>Please Register First</h3>
-     <Form>
+        <h3>Please Register </h3>
+     <Form onSubmit={handleRegister}  >
 
      <Form.Group className="mb-1" controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
@@ -34,6 +69,7 @@ const Register = () => {
 
     <Link to='/login'> <p className='mt-2'> Already Have An Account? Go To  <span className='text-danger'>Login</span>   </p> </Link>
 </Form>
+    <p className='text-danger' >{error}</p>
     </Container>
     );
 };

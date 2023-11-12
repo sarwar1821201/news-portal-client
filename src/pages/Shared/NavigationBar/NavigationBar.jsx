@@ -6,7 +6,15 @@ import { AuthContext } from '../../../providers/AuthProviders';
 
 const NavigationBar = () => {
   
-    const {user} = useContext(AuthContext)
+    const {user, logOut} = useContext(AuthContext)
+
+    const  handleLogout= () =>{
+        logOut()
+        .then()
+        .catch(error=>{
+          console.log(error)
+        })
+    }
 
     return (
         <Container>
@@ -32,7 +40,7 @@ const NavigationBar = () => {
 
             <Nav.Link eventKey={2} href="#memes">
             {
-              user ?  <Button variant="secondary">Logout</Button> :
+              user ?  <Button onClick={handleLogout}  variant="secondary">Logout</Button> :
              <Link to='/login' >  <Button variant="secondary">Login</Button> </Link>
 
             }
